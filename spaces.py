@@ -9,5 +9,4 @@ def firstDef():
                             #Comment with 1 tab and 4 spaces
                 
             print("The last line" ,     " k")
-            print("Nothing below")
-
+            
