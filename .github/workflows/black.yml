@@ -26,5 +26,6 @@ jobs:
           black .
           git config user.name 'autoblack'
           git config user.email 'ippudkippude@gmail.com'
+          git branch
           git commit -am "fixup: Format Python code with Black"
-          git push
+          git push --force
