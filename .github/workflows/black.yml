@@ -1,0 +1,10 @@
+name: Lint-black
+
+on: [push, pull_request,commit]
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: psf/black@stable
