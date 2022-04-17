@@ -7,4 +7,6 @@ def firstDef():
     if 1<2:
             print("Inside if but with tab+4 spaces",   "Second"  )
                             #Comment with 1 tab and 4 spaces
+                
+            print("The last line")
 
