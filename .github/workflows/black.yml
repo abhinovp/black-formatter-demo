@@ -17,6 +17,6 @@ jobs:
           python-version: 3.7
       - name: Install Black
         run: pip install black
-      - name: Run black on spaces.py
-        run: black spaces.py
+      - name: Run black on all files in the folder
+        run: black .
      
