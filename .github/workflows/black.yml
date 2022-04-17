@@ -5,6 +5,10 @@ on: [push, pull_request]
 jobs:
   lint:
     runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v2
-      - uses: psf/black@stable
+    runs:
+      using: "composite"
+      steps:
+        - uses: actions/checkout@v2
+        - uses: psf/black@stable
+        - run: ${{ github.action_path }}/test.sh
+          shell: bash
