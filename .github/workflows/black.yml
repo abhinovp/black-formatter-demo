@@ -24,5 +24,7 @@ jobs:
       - name: If needed, commit black changes to the pull request
         run: |
           black .
+          git config user.name 'autoblack'
+          git config user.email 'ippudkippude@gmail.com'
           git commit -am "fixup: Format Python code with Black"
           git push
