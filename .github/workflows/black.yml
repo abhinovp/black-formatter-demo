@@ -1,14 +1,14 @@
-name: Lint-black
+name: Lint
 
 on: [push, pull_request]
 
 jobs:
   lint:
-    runs:
-      runs-on: ubuntu-latest
-      using: "composite"
-      steps:
-        - uses: actions/checkout@v2
-        - uses: psf/black@stable
-        - run: ${{ github.action_path }}
-          shell: bash
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: psf/black@stable
+        with:
+          options: "--check --verbose"
+          src: "."
+          version: "21.5b1"
